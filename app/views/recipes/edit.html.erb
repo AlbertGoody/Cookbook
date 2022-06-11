@@ -1,0 +1,12 @@
+<h1> Edit <%= @recipe.name %> </h1>
+
+
+ <%= simple_form_for @recipe do |f| %>
+  <%= f.input :name %>
+  <%= f.input :description %>
+  <%= f.button :submit %>
+<% end %>
+
+ <%= simple_form_for @recipe, method: :delete do |f| %>
+  <%= f.button :submit %>
+<% end %>
